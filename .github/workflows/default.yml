@@ -6,6 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Step1
+        env: # Or as an environment variable
+          big__secret: ${{ secrets.bigsecret }}
         run: |
           echo ls -lh
-          echo ls -lh
+          echo "$big__secret"
