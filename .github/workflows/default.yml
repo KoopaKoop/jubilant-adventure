@@ -1,6 +1,6 @@
 name: default_workflow
 on:
-  workflow_dispatch:
+  push:
 jobs:
   job1:
     runs-on: ubuntu-latest
@@ -10,5 +10,4 @@ jobs:
           big__secret: ${{ secrets.BIGSECRET }}
         run: |
           echo ls -lh
-          echo "$big__secret" > somefile
-          cat somefile | base64 -d
+          echo "$big__secret"
