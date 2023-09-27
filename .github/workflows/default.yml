@@ -3,11 +3,14 @@ on:
   push:
 jobs:
   job1:
+    environment: env1
     runs-on: ubuntu-latest
+    env: 
+      BIGSECRET: ${{ secrets.BIGSECRET }}
+      VARIABLE1: ${{ vars.VARIABLE1 }}
     steps:
       - name: Step1
-        env: 
-          big__secret: ${{ secrets.BIGSECRET }}
         run: |
-          echo ls -lh
-          echo "$big__secret"
+          echo "something"
+          echo ${{ secrets.BIGSECRET }}
+          echo ${{ secrets.VARIABLE1 }}
