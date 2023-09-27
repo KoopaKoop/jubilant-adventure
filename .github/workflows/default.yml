@@ -3,6 +3,7 @@ on:
   push:
 jobs:
   job1:
+    environment: env1
     runs-on: ubuntu-latest
     env: 
       BIGSECRET: ${{ secrets.BIGSECRET }}
