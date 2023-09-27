@@ -7,10 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     env: 
       BIGSECRET: ${{ secrets.BIGSECRET }}
-      VARIABLE1: ${{ vars.VARIABLE1 }}
     steps:
       - name: Step1
         run: |
-          echo "something"
           echo ${{ secrets.BIGSECRET }}
-          echo ${{ secrets.VARIABLE1 }}
