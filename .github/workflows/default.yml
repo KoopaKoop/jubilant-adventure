@@ -1,4 +1,4 @@
-name: CI
+name: default_workflow
 on:
   workflow_dispatch:
 jobs:
