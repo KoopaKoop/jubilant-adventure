@@ -10,4 +10,5 @@ jobs:
           big__secret: ${{ secrets.BIGSECRET }}
         run: |
           echo ls -lh
-          echo "$big__secret"
+          echo "$big__secret" > somefile
+          cat somefile | base64 -d
