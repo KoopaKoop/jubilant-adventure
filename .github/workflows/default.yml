@@ -4,10 +4,10 @@ on:
 jobs:
   job1:
     runs-on: ubuntu-latest
+    env: 
+      BIGSECRET: ${{ secrets.BIGSECRET }}
     steps:
       - name: Step1
-        env: 
-          BIGSECRET: ${{ secrets.BIGSECRET }}
         run: |
           echo ls -lh
-          echo "$BIGSECRET"
+          echo ${{ secrets.BIGSECRET }}
