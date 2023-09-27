@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Step1
         env: 
-          big__secret: ${{ secrets.BIGSECRET }}
+          BIGSECRET: ${{ secrets.BIGSECRET }}
         run: |
           echo ls -lh
-          echo "$big__secret"
+          echo "$BIGSECRET"
