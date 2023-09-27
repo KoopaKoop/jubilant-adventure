@@ -1,0 +1,11 @@
+name: CI
+on:
+  workflow_dispatch:
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step1
+        run: |
+          echo ls -lh
+          echo ls -lh
